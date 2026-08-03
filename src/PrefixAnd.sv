@@ -109,3 +109,18 @@ module PrefixAnd #(
 	end // slowPrefix  
 
 endmodule
+
+
+
+module behavioural_PrefixAnd #(
+	parameter int width = 8  // word width
+) (
+	input  logic [width-1:0] PI,  // propagate in
+	output logic [width-1:0] PO   // propagate out
+);
+	generate
+		for (genvar i=0; i<width; i++) begin
+			assign PO[i] = &PI[i:0];
+		end
+	endgenerate
+endmodule
