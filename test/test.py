@@ -112,7 +112,7 @@ for dut in [
 #   DutUnit("AddMod2Np1"           , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # equivalence fail
     DutUnit("AddCsv"               , [                            Timing.FAST]),
     DutUnit("AddMop"               , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]),
-#   DutUnit("AddMopCsv"            , [Timing.SLOW,                Timing.FAST]), # missing behavioral
+#    DutUnit("AddMopCsv"            , [Timing.SLOW,                Timing.FAST]), # missing behavioral
 
     # helper for AddMod2N*
 #   DutUnit("PrefixAndOrCendaround", [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
@@ -164,8 +164,8 @@ for dut in [
 #   DutUnit("SqrPPGenUns"          , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
 
     # helpers
-#   DutUnit("MulPPGenSgn"          , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]),
-#   DutUnit("MulPPGenUns"          , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]),
+#   DutUnit("MulPPGenSgn"          , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
+#   DutUnit("MulPPGenUns"          , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
 #   DutUnit("AddMulPPGenSgn"       , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
 #   DutUnit("AddMulPPGenUns"       , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
 
@@ -197,10 +197,10 @@ for dut in [
     DutUnit("RedAnd"               , [                            Timing.FAST]),
     DutUnit("RedOr"                , [                            Timing.FAST]),
     DutUnit("RedXor"               , [                            Timing.FAST]),
-#   DutUnit("PrefixAnd"            , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
-#   DutUnit("PrefixOr"             , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
+    DutUnit("PrefixAnd"            , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
+    DutUnit("PrefixOr"             , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
 #   DutUnit("PrefixAndOr"          , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
-#   DutUnit("PrefixXor"            , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
+    DutUnit("PrefixXor"            , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
 
     # helper for Cnt
 #   DutUnit("CntSlice"             , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
@@ -317,7 +317,7 @@ for dut in [
 
 #        ys.run_pass(f"opt_clean -purge")
         # create a miter circuit to test equivalence
-        ys.run_pass(f"miter -equiv -make_assert -make_outputs {dut.name} behavioural_{dut.name} miter")
+        ys.run_pass(f"miter -equiv -make_assert -make_outputs behavioural_{dut.name} {dut.name} miter")
         ys.run_pass(f"hierarchy -top miter")
         ys.run_pass(f"flatten")
         # run equivalence check
