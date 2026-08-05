@@ -307,7 +307,7 @@ units = [
 
     # Encoders, Decoders, Gray
     DutUnit("Decode"               , [                            Timing.FAST]),
-    DutUnit("Encode"               , [                            Timing.FAST]), # equivalence fail
+    DutUnit("Encode"               , [                            Timing.FAST]),
     DutUnit("Bin2Gray"             , [                            Timing.FAST]),
     DutUnit("Gray2Bin"             , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]),
     DutUnit("IncGray"              , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]),
@@ -319,10 +319,10 @@ units = [
     DutUnit("RedAnd"               , [                            Timing.FAST]),
     DutUnit("RedOr"                , [                            Timing.FAST]),
     DutUnit("RedXor"               , [                            Timing.FAST]),
-    DutUnit("PrefixAnd"            , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
-    DutUnit("PrefixOr"             , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
+    DutUnit("PrefixAnd"            , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]),
+    DutUnit("PrefixOr"             , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]),
 #   DutUnit("PrefixAndOr"          , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
-    DutUnit("PrefixXor"            , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
+    DutUnit("PrefixXor"            , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]),
 
     # helper for Cnt
 #   DutUnit("CntSlice"             , [Timing.SLOW, Timing.MEDIUM, Timing.FAST]), # missing behavioral
