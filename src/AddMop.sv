@@ -53,9 +53,8 @@ endmodule
 
 
 module behavioural_AddMop #(
-	parameter int              width = 8,             // word width
-	parameter int              depth = 4,             // number of operands
-	parameter lau_pkg::speed_e speed = lau_pkg::FAST  // performance parameter
+	parameter int width = 8,  // word width
+	parameter int depth = 4   // number of operands
 ) (
 	input  logic [(depth*width)-1:0] A,  // operands
 	output logic [        width-1:0] S   // sum

@@ -64,8 +64,7 @@ endmodule
 
 
 module behavioural_AddSub #(
-	parameter int width = 8,  // word width
-	parameter lau_pkg::speed_e speed = lau_pkg::FAST  // performance parameter
+	parameter int width = 8  // word width
 ) (
 	input  logic [width-1:0] A,    // operands
 	input  logic [width-1:0] B,

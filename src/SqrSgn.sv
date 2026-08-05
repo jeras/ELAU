@@ -52,8 +52,7 @@ endmodule
 
 
 module behavioural_SqrSgn #(
-	parameter width = 8,
-	parameter lau_pkg::speed_e speed = lau_pkg::FAST  // performance parameter
+	parameter width = 8
 ) (
 	input  logic [  width-1:0] X,  // operand
 	output logic [2*width-1:0] P   // product

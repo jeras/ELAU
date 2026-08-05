@@ -83,14 +83,13 @@ endmodule
 
 
 module behavioural_IncGray #(
-	parameter int width = 16,  // word width
-	parameter lau_pkg::speed_e speed = lau_pkg::FAST  // performance parameter
+	parameter int width = 16   // word width
 ) (
 	input  logic [width-1:0] A,  // operand
 	output logic [width-1:0] Z   // result
 );
 	logic [width-1:0] Abin, Zbin;
-	behavioural_Gray2Bin #(width, speed) i_gray2bin (
+	behavioural_Gray2Bin #(width) i_gray2bin (
 		.G(A),
 		.B(Abin)
 	);

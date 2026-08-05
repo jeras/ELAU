@@ -66,8 +66,7 @@ endmodule
 
 module behavioural_MulUns #(
 	parameter int widthX = 16,  // word width of X (X <= Y)
-	parameter int widthY = 16,  // word width of Y
-	parameter lau_pkg::speed_e speed = lau_pkg::FAST  // performance parameter
+	parameter int widthY = 16   // word width of Y
 ) (
 	input logic [widthX-1:0] X,  // multiplier
 	input logic [widthY-1:0] Y,  // multiplicand

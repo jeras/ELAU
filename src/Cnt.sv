@@ -59,8 +59,7 @@ endmodule
 
 
 module behavioural_Cnt #(
-	parameter int              depth = 18,            // number of input bits
-	parameter lau_pkg::speed_e speed = lau_pkg::FAST  // performance parameter
+	parameter int depth = 18   // number of input bits
 ) (
 	input logic [depth-1:0] A,  // input bits
 	output logic [lau_pkg::log2floor(depth):0] S  // sum output
