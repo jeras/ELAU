@@ -59,9 +59,10 @@ module behavioural_Encode #(
 	output logic [$clog2(width)-1:0] Z  // enc. output
 );
 	always_comb begin
+		Z = '0;
 		for (int i = 0; i < width; i++ ) begin
 			if(A[i]) begin
-				Z = i;
+				Z |= i[$clog2(width)-1:0];
 			end
 		end
 	end
