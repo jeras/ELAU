@@ -70,5 +70,5 @@ module behavioural_AddMod2Np1 #(
 	assign Buns = {2'b00, B} + 1; // recover diminished-one
 	assign Suns = (Auns + Buns) % mod;
 	// zero is unique, otherwise diminished one
-	assign S = (S == 0) ? '0 : (S[width-1:0] - 1);
+	assign S = (Suns == 0) ? '0 : (Suns[width-1:0] - 1);
 endmodule
